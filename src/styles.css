@@ -1,0 +1,60 @@
+html,
+body {
+    height: 100%;
+    background-color: aliceblue;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: rgba(0, 0, 255, 0);
+}
+
+
+
+
+.mat-header-cell {
+    min-width: 100px;
+}
+
+.row {
+    padding: 1em 1em;
+    margin: 0;
+}
+
+
+.row.primary {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 0fr;
+    align-items: center;
+    text-align: center;
+}
+
+.social i {
+    color: #ffffff;
+}
+
+.copyright {
+    padding: 0.3em 1em;
+    background-color: #004979;
+}
+
+.footer-menu {
+    margin-top: 10px;
+}
+
+.footer-menu a {
+    color: #ffffff;
+    padding: 6px;
+
+    text-decoration: none;
+}
+
+.footer-menu a:hover {
+    color: #27bcda;
+}
+
+.copyright p {
+    font-size: 0.9em;
+    text-align: center;
+}

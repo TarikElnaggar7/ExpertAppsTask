@@ -1,0 +1,101 @@
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container header">
+                <div>
+                    <img height="45px" width="166px" src="../assets/images/expert-apps-logo-color.jpg">
+                </div>
+                <div>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a href="#">Home</a></li>
+                        <li class="nav-item"><a href="#">About Us</a></li>
+                        <li class="nav-item"><a href="#">Solutions</a></li>
+                        <li class="nav-item"><a href="#">Clients & Testimonials</a></li>
+                        <li class="nav-item"><a href="#">Our Team</a></li>
+                        <li class="nav-item"><a href="#">Blog</a></li>
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-outline-info">ع</button>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <div class="container" style="width: 60%; padding-bottom: 250px;">
+        <div class="row  create-button">
+            <div class="col-md-3" style="margin-top:10px">
+                <label mat-label>{{dataSource.data.length}} Post</label>
+            </div>
+            <div class="col-md-3">
+                <button mat-raised-button color="primary" (click)="openPostFormDialog()">Create New Posts</button>
+            </div>
+        </div>
+        <div class="mat-elevation-z8">
+            <table mat-table [dataSource]="dataSource">
+                <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef> Id </th>
+                    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="userId">
+                    <th mat-header-cell *matHeaderCellDef> User Id </th>
+                    <td mat-cell *matCellDef="let element"> {{element.userId}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="title">
+                    <th mat-header-cell *matHeaderCellDef> Title </th>
+                    <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="body">
+                    <th mat-header-cell *matHeaderCellDef> Body </th>
+                    <td mat-cell *matCellDef="let element"> {{element.body}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+            <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+        </div>
+    </div>
+
+    <footer>
+        <div class="row primary">
+            <div class="container">
+                <div class="row" style="text-align:center">
+                    <div class="col-md-12">
+                        <img src="../assets/images/Footer.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="footer-menu">
+                        <a href="#">About Us</a>
+                        <a href="#">Solutions</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="col-md-4" style="text-align: center;">
+                    <div class="footer-menu social">
+                        <i class="fa-brands fa-twitter-square"></i>
+                        <i class="fa-brands fa-facebook-square"></i>
+                        <i class="fa-brands  fa-linkedin-square"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row copyright">
+            <p>&copy; 2022 <b>Expert Apps</b>, All Right Reserved</p>
+        </div>
+    </footer>
+
+</body>
